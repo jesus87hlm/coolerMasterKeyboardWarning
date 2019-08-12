@@ -1,6 +1,6 @@
 # coolerMasterKeyboardWarning
 
-Trying to give utility to rgb keyboards for programming using CoolerMaster SDK to make keyboard blink
+Trying to give some utility to rgb keyboards for programming using CoolerMaster SDK
 
 
 ### Settings.json
@@ -60,4 +60,18 @@ enum DEVICE_INDEX {
 	DEV_MK850 = 16,
 	DEV_DEFAULT = 0xFFFF
 };
+```
+
+
+### Example using Laravel Mixer
+
+```js
+mix.js('resources/assets/js/main.js', 'public/js')
+    .sass('resources/assets/sass/app.scss', 'public/css')
+    .then((stats) => {
+        if (stats.hasErrors()){
+            // exec program
+            exec('"/PATH-TO/CMErrorWarning.exe"')
+        }
+    })
 ```
