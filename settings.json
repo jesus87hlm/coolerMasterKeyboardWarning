@@ -1,0 +1,9 @@
+{
+  "model": 12,
+	"number_blinks": 10,
+	"reset_color": {
+		"r": 217,
+		"g": 82,
+		"b": 110
+	}
+}
