@@ -4,21 +4,35 @@ Trying to give utility to rgb keyboards for programming using CoolerMaster SDK t
 
 
 ### Settings.json
+<ul>
+	<li>	"model" // Model ID </li>
+<li>	"number_blinks" // Number of 'blinks' </li>
+<li>	"reset_color" // Keyboard color after warning
+	<ul>
+	<li>	"r": 217,
+	<li>	"g": 82,
+	<li>	"b": 110
+	</ul> </li>
+  	<li>"effect_index" // Keyboard effect ID </li>
+		</ul>
+</code>
 
+```json
 {
-  "model": 12, // Model ID
-	"number_blinks": 10, // Number of 'blinks'
-	"reset_color": { // Keyboard color after warning
+	"model": 12,
+	"number_blinks": 10,
+	"reset_color": {
 		"r": 217,
 		"g": 82,
 		"b": 110
-	}.
-  "effect_index": 0 // Keyboard effect ID
+	},
+  	"effect_index": 0
 }
-
+```
 
 ### Enumeration of effects (based on SDK)
 
+```cpp
 enum EFF_INDEX { 
 	EFF_FULL_ON = 0, EFF_BREATH = 1, EFF_BREATH_CYCLE = 2 , EFF_SINGLE = 3,  EFF_WAVE = 4, EFF_RIPPLE = 5, 
 	EFF_CROSS = 6, EFF_RAIN = 7, EFF_STAR = 8, EFF_SNAKE = 9, EFF_REC = 10,
@@ -31,10 +45,13 @@ enum EFF_INDEX {
 	EFF_MULTI_1 = 0xE0, EFF_MULTI_2 = 0xE1, EFF_MULTI_3 = 0xE2, EFF_MULTI_4 = 0xE3, 	                      
 	EFF_OFF = 0xFE
 };
-					
+
+```					
+
 
 ### Enumeration of device list (based on SDK)
 
+```cpp
 enum DEVICE_INDEX { 
 	DEV_MKeys_L = 0, DEV_MKeys_S = 1, DEV_MKeys_L_White = 2, DEV_MKeys_M_White = 3, 
 	DEV_MMouse_L = 4, DEV_MMouse_S = 5, DEV_MKeys_M = 6, DEV_MKeys_S_White = 7, 
@@ -43,3 +60,4 @@ enum DEVICE_INDEX {
 	DEV_MK850 = 16,
 	DEV_DEFAULT = 0xFFFF
 };
+```
